@@ -1,0 +1,108 @@
+#!===--- new-issues-labels.yaml - New issues' labels -----------*- Yaml -*-===!#
+#!                                                                            !#
+#! Copyright (c) 2024 The Nlang contributors.                                 !#
+#! Visit CONTRIBUTORS.txt for the list of Nlang authors.                      !#
+#!                                                                            !#
+#! Part of the Nlang compiler, under the Apache License v2.0.                 !#
+#! See LICENSE.txt for license information.                                   !#
+#! SPDX-License-Identifier: Apache-2.0                                        !#
+#!                                                                            !#
+#!===----------------------------------------------------------------------===!#
+#!                                                                            !#
+#! This file contains labels that are automatically placed on new issues by   !#
+#! new-issues-labeler.yaml.                                                   !#
+#!                                                                            !#
+#!===-----------------------------------------------------------+- Yaml -+-===!#
+
+'New Issue':
+  - ''
+
+#!===----------------------------------------------------------------------===!#
+#! Default Github labels                                                      !#
+#!===----------------------------------------------------------------------===!#
+
+'Bug':
+  - '/(?=.*\[Bug\])|(?<!\S)Bugs(?!\S)|(?<!\S)Bug(?!\S)/i'
+
+'Enhancement':
+  - '/(?=.*\[Enhancement\])|(?<!\S)Enhancements(?!\S)|(?<!\S)Enhancement(?!\S)/i'
+
+'Good First Issue':
+  - '/(?=.*\[Good First Issue\])|(?=.*\[GFI\])|(?<!\S)Good First Issues(?!\S)|(?<!\S)Good First Issue(?!\S)|(?<!\S)GFI(?!\S)|(?<!\S)GFIs(?!\S)/i'
+
+'Question':
+  - '/(?=.*\[Question\])|(?<!\S)Questions(?!\S)|(?<!\S)Question(?!\S)/i'
+
+#!===----------------------------------------------------------------------===!#
+#! Git-related labels                                                         !#
+#!===----------------------------------------------------------------------===!#
+
+'Git':
+  - '/(?=.*\[Git\])(?!.*\[Ignore\])(?!.*\[Attributes\])(?!.*\[Blame\])|(?<!\S)Git(?!\S)|(?<!\S)Git-\d+(?!\S)/i'
+
+'Git:Ignore':
+  - '/(?=.*\[Git\])(?=.*\[Ignore\])|(?=.*\[Git Ignore\])|(?<!\S)\.gitignore(?!\S)|(?<!\S)Git Ignore(?!\S)/i'
+
+'Git:Attributes':
+  - '/(?=.*\[Git\])(?=.*\[Attributes\])|(?=.*\[Git Attributes\])|(?<!\S)\.gitattributes(?!\S)|(?<!\S)Git Attributes(?!\S)/i'
+
+'Git:Blame':
+  - '/(?=.*\[Git\])(?=.*\[Blame\])|(?=.*\[Git Blame\])|(?<!\S)\.git-blame-ignore-revs(?!\S)|(?<!\S)Git Blame(?!\S)/i'
+
+#!===----------------------------------------------------------------------===!#
+#! Clang-related labels                                                       !#
+#!===----------------------------------------------------------------------===!#
+
+'Clang':
+  - '/(?=.*\[Clang\])(?!.*\[Tidy\])(?!.*\[Format\])|(?<!\S)Clang(?!\S)|(?<!\S)Clang-\d+(?!\S)/i'
+
+'Clang-Tidy':
+  - '/(?=.*\[Clang\])(?=.*\[Tidy\])|(?=.*\[clang-tidy\])|(?<!\S)\.clang-tidy(?!\S)|(?<!\S)clang-tidy(?!\S)|(?<!\S)clang-tidy-\d+(?!\S)/i'
+
+'Clang-Format':
+  - '/(?=.*\[Clang\])(?=.*\[Format\])|(?=.*\[clang-format\])|(?<!\S)\.clang-format(?!\S)|(?<!\S)clang-format(?!\S)|(?<!\S)clang-format-\d+(?!\S)/i'
+
+#!===----------------------------------------------------------------------===!#
+#! Documentation labels                                                       !#
+#!===----------------------------------------------------------------------===!#
+
+'Docs':
+  - '/^(?=.*\[Docs\])|(?<!\S)Documentation(?!\S)|(?<!\S)Documentations(?!\S)|(?<!\S)Document(?!\S)|(?<!\S)Documents(?!\S)|(?<!\S)Doc(?!\S)|(?<!\S)Docs(?!\S)/i'
+
+'License':
+  - '/(?=.*\[License\])|(?<!\S)LICENSE.txt(?!\S)|(?<!\S)License(?!\S)|(?<!\S)Licenses(?!\S)/i'
+
+'README':
+  - '/(?=.*\[README\])|(?<!\S)README.txt(?!\S)|(?<!\S)README.md(?!\S)|(?<!\S)README.rst(?!\S)|(?<!\S)README(?!\S)|(?<!\S)READMES(?!\S)/i'
+
+'Authors':
+  - '/(?=.*\[Authors\])|(?<!\S).mailmap(?!\S)|(?<!\S)Mailmap(?!\S)|(?<!\S)Mail Map(?!\S)|(?<!\S)CODE_OWNERS.txt(?!\S)|(?<!\S)Code Owners(?!\S)|(?<!\S)CONTRIBUTORS.txt(?!\S)|(?<!\S)CONTRIBUTORS(?!\S)/i'
+
+'SecurityFiles':
+  - '/(?=.*\[SecurityFiles\])|(?<!\S)BUGS.txt(?!\S)|(?<!\S)SECURITY.txt(?!\S)/i'
+
+#!===----------------------------------------------------------------------===!#
+#! Labels for programming languages                                           !#
+#!===----------------------------------------------------------------------===!#
+
+'Python':
+  - '/(?=.*\[Python\])|(?<!\S)Python(?!\S)|(?<!\S)Python-\d+(?!\S)/i'
+
+'TOML':
+  - '/(?=.*\[TOML\])|(?<!\S)pyproject.toml(?!\S)|(?<!\S)TOML(?!\S)|(?<!\S)TOML-\d+(?!\S)/i'
+
+#!===----------------------------------------------------------------------===!#
+#! Other labels                                                               !#
+#!===----------------------------------------------------------------------===!#
+
+'NlangBot':
+  - '/(?=.*\[NlangBot\])|(?<!\S)NlangBot(?!\S)|(?<!\S)NlangBot-\d+(?!\S)/i'
+
+'PackageConfigurations':
+  - '/(?=.*\[PackageConfigurations\])|(?=.*\[PkgConfigs\])|(?<!\S)pyproject.toml(?!\S)|(?<!\S)Package Configurations(?!\S)|(?<!\S)Package Configuration(?!\S)/i'
+
+'Test':
+  - '/(?=.*\[Test\])|(?<!\S)Tests(?!\S)|(?<!\S)Test(?!\S)/i'
+
+'Github':
+  - '/(?=.*\[Github\])|(?<!\S)\.github(?!\S)|(?<!\S)Github(?!\S)/i'

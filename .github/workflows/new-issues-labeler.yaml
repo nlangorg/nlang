@@ -1,0 +1,43 @@
+#!===--- new-issues-labeler.yaml - Labeler for new issues ------*- Yaml -*-===!#
+#!
+#! Copyright (c) 2024 The Nlang contributors.
+#! Visit CONTRIBUTORS.txt for the list of Nlang authors.
+#!
+#! Part of the Nlang compiler, under the Apache License v2.0.
+#! See LICENSE.txt for license information.
+#! SPDX-License-Identifier: Apache-2.0
+#!
+#!===----------------------------------------------------------------------===!#
+#!
+#! This file is used by Github Actions to automatically place the labels
+#! specified in new-issues-labels.yaml on every new issues.
+#!
+#! Keep in mind that this labeler is not perfect. If there is a misplaced or
+#! a missing label, please fix it manually.
+#!
+#!===-----------------------------------------------------------+- Yaml -+-===!#
+
+name: "Labeling new issues"
+
+on:
+  issues:
+    types: ['opened']
+
+permissions:
+  contents: 'read'
+  issues: 'write'
+
+jobs:
+  new-issues-labeler:
+    runs-on: 'ubuntu-latest'
+    if: github.repository == 'nlangorg/nlang'
+    steps:
+    - uses: 'github/issue-labeler@v3.4'
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        configuration-path: '.github/new-issues-labels.yaml'
+        include-title: 1
+        include-body: 0
+        sync-labels: 0
+        enable-versioned-regex: 0
+
