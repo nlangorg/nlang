@@ -1,0 +1,8 @@
+Reporting Nlang security issues
+===============================
+
+Nlang is in very early stages of development; therefore, vulnerabilities and
+bugs can be disclosed publicly.
+
+Please report them at https://github.com/nlangorg/nlang/issues.
+
